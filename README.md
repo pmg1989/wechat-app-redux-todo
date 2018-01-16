@@ -29,4 +29,4 @@
 
 ### 特别感谢
 
-charleyw: [wechat-weapp-redux-todos](git@github.com:charleyw/wechat-weapp-redux-todos.git)
+charleyw: [wechat-weapp-redux-todos](https://github.com/charleyw/wechat-weapp-redux-todos.git)
