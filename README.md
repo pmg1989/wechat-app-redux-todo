@@ -5,7 +5,11 @@
 
 ![remote-redux-devtools](./assets/remote-redux-devtools.gif)
 
-使用了小程序的Redux绑定库：[wechat-weapp-redux](https://github.com/charleyw/wechat-weapp-redux)
+需要打开小程序开发工具的配置中`项目`->`基础信息`->`开发环境不校验请求域名以及 TLS 版本 `**
+
+![weapp-config](./assets/weapp-config.png)
+
+项目使用了小程序的Redux绑定库：[wechat-weapp-redux](https://github.com/charleyw/wechat-weapp-redux)
 
 ### 使用
 
