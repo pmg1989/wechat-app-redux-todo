@@ -43,4 +43,4 @@ npm run dev
 
 ### 特别感谢
 
-charleyw: [wechat-weapp-redux-todos](https://github.com/charleyw/wechat-weapp-redux-todos.git)
+charleyw: [wechat-weapp-redux](https://github.com/charleyw/wechat-weapp-redux)
