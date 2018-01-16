@@ -4,7 +4,7 @@
     <text 
       wx:for="{{filters}}" 
       wx:key="key"
-      bindtap="applyFilter" 
+      bindtap="handleFilter" 
       id="{{item.key}}" 
       class="{{visibilityFilter == item.key ? 'active' : ''}}"
     >{{item.text}}</text>
@@ -16,7 +16,7 @@
     </view>
   </view>
    
-  <form class="add-todo" bindsubmit="addTodo">
+  <form class="add-todo" bindsubmit="handleAddTodo">
     <input name="todo" class="todo-input" placeholder="点击添加"/>
     <button formType="submit">完成</button>
   </form>
