@@ -10,5 +10,5 @@ export const {
 } = createActions({
   [ADD_TODO]: text => ({ id: (nextTodoId += 1), text }),
   [TOGGLE_TODO]: id => ({ id }),
-  [SET_VISIBILITY_FILTER]: filter => ({ filter })
+  [SET_VISIBILITY_FILTER]: filter => ({ filter }),
 })
