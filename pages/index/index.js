@@ -5,7 +5,7 @@ import { addTodo, setVisibilityFilter, toggleTodo } from '../../actions/todos.js
 
 const pageConfig = {
   data: {
-    filters: [{ key: SHOW_ALL, text: '全部' }, { key: SHOW_ACTIVE, text: '正在进行' }, { key: SHOW_COMPLETED, text: '已完成' }]
+    filters: [{ key: SHOW_ALL, text: '全部' }, { key: SHOW_ACTIVE, text: '正在进行' }, { key: SHOW_COMPLETED, text: '已完成' }],
   },
   handleCheck (e) {
     this.toggleTodo(+e.target.id)
