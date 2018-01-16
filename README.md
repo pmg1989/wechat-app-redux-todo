@@ -31,7 +31,7 @@ npm install 或者 yarn 或者 yarn install
 npm run dev
 ```
 
-浏览器中访问**localhost:5678
+浏览器中访问[http://localhost:5678](http://localhost:5678)
 
 ### 特别感谢
 
