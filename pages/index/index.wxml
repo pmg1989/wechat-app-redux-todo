@@ -3,7 +3,7 @@
   <view class="filters">
     <text 
       wx:for="{{filters}}" 
-      wx:key="*item"
+      wx:key="key"
       bindtap="applyFilter" 
       id="{{item.key}}" 
       class="{{visibilityFilter == item.key ? 'active' : ''}}"
@@ -11,7 +11,7 @@
   </view>
 
   <view class="todos">
-    <view wx:for="{{todos}}" wx:key="*item" class="todo-item {{item.completed ? 'completed' : ''}}" id="{{item.id}}" bindtap="handleCheck">
+    <view wx:for="{{todos}}" wx:key="id" class="todo-item {{item.completed ? 'completed' : ''}}" id="{{item.id}}" bindtap="handleCheck">
       <icon type="{{item.completed ? 'success_circle' : 'circle'}}" size="18"/> {{item.text}}
     </view>
   </view>
