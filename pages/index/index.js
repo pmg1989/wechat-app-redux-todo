@@ -1,10 +1,11 @@
 import { connect } from '../../libs/wechat-weapp-redux.js'
 import { bindActionCreators } from '../../libs/redux.js'
-import { addTodo, setVisibilityFilter, toggleTodo } from '../../actions/index.js'
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../../constants/todos.js'
+import { addTodo, setVisibilityFilter, toggleTodo } from '../../actions/todos.js'
 
 const pageConfig = {
   data: {
-    filters: [{ key: 'SHOW_ALL', text: '全部' }, { key: 'SHOW_ACTIVE', text: '正在进行' }, { key: 'SHOW_COMPLETED', text: '已完成' }],
+    filters: [{ key: SHOW_ALL, text: '全部' }, { key: SHOW_ACTIVE, text: '正在进行' }, { key: SHOW_COMPLETED, text: '已完成' }],
   },
   handleCheck: function (e) {
     this.toggleTodo(+e.target.id)
