@@ -6,8 +6,7 @@ const pageConfig = {
     filters: [{ key: 'SHOW_ALL', text: '全部' }, { key: 'SHOW_ACTIVE', text: '正在进行' }, { key: 'SHOW_COMPLETED', text: '已完成' }],
   },
   handleCheck: function (e) {
-    const id = parseInt(e.target.id)
-    this.toggleTodo(id)
+    this.toggleTodo(+e.target.id)
   },
   handleFilter: function (e) {
     this.setVisibilityFilter(e.target.id)
