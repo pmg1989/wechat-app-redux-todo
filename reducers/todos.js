@@ -7,22 +7,18 @@ const todo = (state, action) => {
         completed: false,
       }
     case 'TOGGLE_TODO':
-      if (state.id !== action.id) {
-        return state
-      }
-      return Object.assign({}, state, { completed: !state.completed })
+      return state.id !== action.id ? state : { ...state, completed: !state.completed }
     default:
       return state
   }
 }
 
-const initState = [{ id: -1, text: 'init item', completed: false }]
+const initState = [{ id: 1, text: 'init item', completed: false }]
 
 const todos = (state = initState, action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      state.push(todo(undefined, action))
-      return state
+      return [...state, todo(undefined, action)]
     case 'TOGGLE_TODO':
       return state.map(t => todo(t, action))
     default:
