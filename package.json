@@ -1,5 +1,30 @@
 {
+  "private": true,
+  "name": "wechat-app-redux-todo",
+  "version": "1.0.1",
+  "scripts": {
+    "dev": "remotedev --hostname=localhost --port=5678",
+    "start": "remotedev --hostname=localhost --port=5678",
+    "lint": "eslint --fix --ext .js actions constants pages reducers",
+    "precommit": "npm run lint"
+  },
   "dependencies": {
+    "eslint-plugin-react": "^7.5.1",
     "redux-actions": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-import": "^1.1.1",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-runtime": "^6.9.2",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.12.0",
+    "remotedev-server": "^0.2.4"
   }
 }
