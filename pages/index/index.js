@@ -1,4 +1,5 @@
 import { connect } from '../../libs/wechat-weapp-redux.js'
+import { bindActionCreators } from '../../libs/redux.js'
 import { addTodo, setVisibilityFilter, toggleTodo } from '../../actions/index.js'
 
 const pageConfig = {
@@ -38,10 +39,9 @@ const mapStateToData = state => ({
 })
 
 const mapDispatchToPage = dispatch => ({
-  setVisibilityFilter: filter => dispatch(setVisibilityFilter(filter)),
-  toggleTodo: id => dispatch(toggleTodo(id)),
-  addTodo: text => dispatch(addTodo(text)),
+  setVisibilityFilter: bindActionCreators(setVisibilityFilter, dispatch),
+  toggleTodo: bindActionCreators(toggleTodo, dispatch),
+  addTodo: bindActionCreators(addTodo, dispatch),
 })
-
 
 Page(connect(mapStateToData, mapDispatchToPage)(pageConfig))
