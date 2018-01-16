@@ -33,7 +33,7 @@ npm install 或者 yarn 或者 yarn install
 npm run dev
 ```
 
-浏览器中访问: [http://localhost:5678](http://localhost:5678)
+浏览器中访问: [http://localhost:5678](http://localhost:5678), 即可启动redux-devtools调试工具开发调试啦！
 
 ### 备注
 
