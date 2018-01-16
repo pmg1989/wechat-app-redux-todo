@@ -9,8 +9,6 @@
 
 ![weapp-config](./assets/weapp-config.png)
 
-项目使用了小程序的Redux绑定库：[wechat-weapp-redux](https://github.com/charleyw/wechat-weapp-redux)
-
 ### 使用
 
 导入到微信的开发工具运行就可以了。
