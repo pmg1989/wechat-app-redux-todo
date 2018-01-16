@@ -31,7 +31,11 @@ npm install 或者 yarn 或者 yarn install
 npm run dev
 ```
 
-浏览器中访问[http://localhost:5678](http://localhost:5678)
+浏览器中访问: [http://localhost:5678](http://localhost:5678)
+
+### 备注
+
+项目中因为使用了`eslint`检测机制，所以引入了`package.json`等配置文件，在每次 `git commit` 时都会校验代码格式。
 
 ### 特别感谢
 
