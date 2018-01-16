@@ -3,15 +3,20 @@ import { addTodo, setVisibilityFilter, toggleTodo } from '../../actions/index.js
 
 const pageConfig = {
   data: {
-    filters: [{ key: 'SHOW_ALL', text: '全部' }, { key: 'SHOW_ACTIVE', text: '正在进行' }, { key: 'SHOW_COMPLETED', text: '已完成' }]
+    filters: [{ key: 'SHOW_ALL', text: '全部' }, { key: 'SHOW_ACTIVE', text: '正在进行' }, { key: 'SHOW_COMPLETED', text: '已完成' }],
   },
   handleCheck: function (e) {
-    const id = parseInt(e.target.id)
-    this.toggleTodo(id)
+    this.toggleTodo(+e.target.id)
   },
-  applyFilter: function (e) {
+  handleFilter: function (e) {
     this.setVisibilityFilter(e.target.id)
-  }
+  },
+  handleAddTodo: function (e) {
+    const text = e.detail.value.todo
+    if(text.length) {
+      this.addTodo(text)
+    }
+  },
 }
 
 const filterTodos = (todos, filter) => {
@@ -35,7 +40,7 @@ const mapStateToData = state => ({
 const mapDispatchToPage = dispatch => ({
   setVisibilityFilter: filter => dispatch(setVisibilityFilter(filter)),
   toggleTodo: id => dispatch(toggleTodo(id)),
-  addTodo: event => dispatch(addTodo(event.detail.value.todo)),
+  addTodo: text => dispatch(addTodo(text)),
 })
 
 
