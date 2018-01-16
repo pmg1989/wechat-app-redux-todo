@@ -1,12 +1,10 @@
+import { handleActions } from '../libs/redux-actions'
 import { SHOW_ALL, SET_VISIBILITY_FILTER } from '../constants/todos.js'
 
-const visibilityFilter = (state = SHOW_ALL, action) => {
-  switch (action.type) {
-    case SET_VISIBILITY_FILTER:
-      return action.filter
-    default:
-      return state
+const visibilityFilter = handleActions({
+  [SET_VISIBILITY_FILTER](state, { payload }) {
+    return payload.filter
   }
-}
+}, SHOW_ALL)
 
 export default visibilityFilter
