@@ -73,6 +73,7 @@
   },
   "globals": {
     "Page": true,
-    "NEWBAND": true
+    "NEWBAND": true,
+    "wx": true
   }
 }

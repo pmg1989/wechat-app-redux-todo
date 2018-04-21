@@ -1,11 +1,14 @@
 import { connect } from '../../libs/wechat-weapp-redux.js'
 import { bindActionCreators } from '../../libs/redux.js'
 import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../../constants/todos.js'
-import { addTodo, setVisibilityFilter, toggleTodo } from '../../actions/todos.js'
+import { addTodo, setVisibilityFilter, toggleTodo, fetchTaskList } from '../../actions/todos.js'
 
 const pageConfig = {
   data: {
     filters: [{ key: SHOW_ALL, text: '全部' }, { key: SHOW_ACTIVE, text: '正在进行' }, { key: SHOW_COMPLETED, text: '已完成' }],
+  },
+  onReady () {
+    this.fetchTaskList()
   },
   handleCheck (e) {
     this.toggleTodo(+e.target.id)
@@ -43,6 +46,7 @@ const mapDispatchToPage = dispatch => ({
   setVisibilityFilter: bindActionCreators(setVisibilityFilter, dispatch),
   toggleTodo: bindActionCreators(toggleTodo, dispatch),
   addTodo: bindActionCreators(addTodo, dispatch),
+  fetchTaskList: bindActionCreators(fetchTaskList, dispatch),
 })
 
 Page(connect(mapStateToData, mapDispatchToPage)(pageConfig))

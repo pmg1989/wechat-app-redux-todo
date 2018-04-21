@@ -1,5 +1,5 @@
 import { handleActions } from '../libs/redux-actions'
-import { ADD_TODO, TOGGLE_TODO } from '../constants/todos.js'
+import { FETCH_LIST, ADD_TODO, TOGGLE_TODO } from '../constants/todos.js'
 
 const todo = handleActions({
   [ADD_TODO] (state, { payload: { id, text } }) {
@@ -10,9 +10,12 @@ const todo = handleActions({
   },
 }, {})
 
-const initState = [{ id: 1, text: 'init item', completed: false }]
+const initState = []
 
 const todos = handleActions({
+  [FETCH_LIST] (state, action) {
+    return action.list
+  },
   [ADD_TODO] (state, action) {
     return [...state, todo(undefined, action)]
   },
